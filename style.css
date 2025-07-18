@@ -1,0 +1,30 @@
+<html>
+<head>
+<<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+       <title>FoodieHub</title>
+<style>
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family:'segoe Ui',Tahoma,Geneva,Verdana,sans-serif;
+  }
+body{
+	background-color:White;
+	color:black;
+	line-height:1.6;
+}
+.section{
+	padding:4rem 2rem;
+	text-align:center;
+}
+.card{
+	border:1px solid black;
+	border-radius:10px;
+	overflow:hidden;
+	box-shadow:0 2px 5px rgba(0,0,0,0.1);
+	transition:transform 0.2s;
+	background:white;
+}
+
