@@ -34,6 +34,12 @@ body{
 	max-width:1200px;
 	margin:auto;
 }
+footer{
+	background:white;
+	color:black;
+	padding:2rem;
+	text-align:center;
+}
 </style>
 <body>
 	<section class="section">
@@ -58,4 +64,14 @@ body{
 					</div>
 					</section>
 
-
+                                        <footer>
+					<p>&copy;2025 FoodieHub.All rights reserved.</p>
+					<p>Follow us on:
+					  <a href="#" style="color:pink;">Instagram</a>|
+					   <a href="#" style="color:blue;">Facebook</a>|
+					    <a href="#" style="color:white;">Twitter</a>|
+					     <a href="#" style="color:green;">Whatsapp</a>
+					  </p>
+					  </footer>
+</body>
+</html>
