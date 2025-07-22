@@ -159,5 +159,19 @@ nav ul li a{
 				alert('${itemName} added to cart!');
 			};
 		});
+
+
+		const cartLink = document.querySelector("a[href='#']):contains('Cart')");
+		if(cartLink){
+			cartLink.addEventListener("click",function(e){
+				e.preventDefault();
+				if (cartItems.length === 0) {
+					alert("You'r cart is empty.");
+				}
+				else{
+					alert("Cart Items:\n" + cartitems.join("\n"));
+				}
+			});
+		}
 </body>
 </html>
