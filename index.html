@@ -126,5 +126,19 @@ nav ul li a{
 			</div>
 		</div>
 	</section>
+
+	<script>
+		document.addEventListener("DOMContentLoaded",function(){
+			const categoryCards = document.querySelectorAll(".categories.card");
+			const filterBtn = documents.createElement("button");
+			filterBtn.textContent = "Show Only Pizza";
+			filterBtn.style.marginTop = "2rem";
+			filterBtr.onclick = function(){
+				categoryCards.forEach(card =>{
+					const name = card.querySelector("h3").textContent;
+					if(name !=="Pizza")card.style.display = "none";
+					else card.style.display = "block";
+				});
+			};
 </body>
 </html>
