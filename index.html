@@ -140,5 +140,24 @@ nav ul li a{
 					else card.style.display = "block";
 				});
 			};
+
+
+			document.querySelector(".catrgories").after(filterBtn);
+		});
+
+
+		const cartItems = [];
+		const popularCards = document.querySelectorAll(".popular.card");
+		popularCards.forEach((card,index) => {
+			const addBtn = document.createElement("button");
+			addBtn.textContent = "Add to Cart";
+			addBtn.style.marginBottom = "1rem";
+			card.appendChild(addBtn);
+			addBtn.onclick = function(){
+				const itemName = card.querySelector("h3").textContent;
+				cardItems.push(itemName);
+				alert('${itemName} added to cart!');
+			};
+		});
 </body>
 </html>
