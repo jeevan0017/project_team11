@@ -165,7 +165,7 @@ nav ul li a{
 		if(cartLink){
 			cartLink.addEventListener("click",function(e){
 				e.preventDefault();
-				if (cartItems.length === 0) {
+				if (cartItems.length = = = 0) {
 					alert("You'r cart is empty.");
 				}
 				else{
@@ -173,5 +173,19 @@ nav ul li a{
 				}
 			});
 		}
+
+
+		const testimonialText = ["Fantastic service and great variety! My go-to app for lunch.-Ravi.T.",
+			"Affordable and quick,never disappoints.Try the briyani!-Ayesha.k.",
+			"The delivery is always on time and food is warm and delicious.-Mohit.b."
+			];
+		let currentTestimonial = 0;
+		function updateTestimonial(){
+			const testimonialDiv = document.querySelector(".testimonial");
+			testimonialDiv.innerHTML = testimonialText[currentTestimonial];
+			currentTestimonial = (currentTestimonial + 1)% testimonialText.length;
+		}
+
+		setInterval(updateTestimonial,5000);
 </body>
 </html>
