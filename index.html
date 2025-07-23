@@ -156,5 +156,23 @@ nav ul li a{
 				scrollBtn.style.display = "none";
 			}
 		};
+
+		const searchInput = document.getElementById("searchInput");
+		 
+		searchInput.addEventListener("input",function () {
+			const filter = searchInput.value.toLowercase();
+			const foodItems = document.querySelectorAll(".food-item");
+
+			foodItems.forEach(function (item)
+				{
+					const itemText = item.textContent.toLowerCase();
+					if(itemText.includes(filter)){
+						item.style.display = "block";
+					}
+					else{
+						item.style.display = "none";
+					}
+				});
+		});
 </body>
 </html>
