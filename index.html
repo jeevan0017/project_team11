@@ -184,6 +184,18 @@ nav ul li a{
 		darkToggle.style.background = "white";
 		darkToggle.style.color = "grey";
 		darkToggle.style.border = "none";
-		darkToogle.style,borderRadius = "5px";
+		darkToggle.style,borderRadius = "5px";
+		darkToggle.style.cursor = "pointer";
+		document.body.appendChild(darkToggle);
+
+		let dark = false;
+
+		darkToggle.onclick = function () {
+			dark = !dark;
+
+			document.body.style.backgroundColor = dark ? "white" : "grey";
+			document.body.style.color = dark ? "white" : "grey";
+			darktoggle.textContent = dark ? "Light Mode" : "Dark Mode";
+		};
 </body>
 </html>
