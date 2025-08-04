@@ -4,6 +4,22 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
       <title>FoodieHub|Home</title>
 <style>
+<<<<<<< HEAD
+footer{
+	background:white;
+	color:black;
+	padding:2rem;
+	text-align:center;
+}
+button{
+	background:white;
+	color:black;
+	border:none;
+	padding:10px 20px;
+	margin-top:1rem;
+	cursor:pointer;
+	border-radius:5px;
+=======
 *{
 	margin:0;
 	padding:0;
@@ -75,6 +91,7 @@ nav ul li a{
 	background:white;
 	object-fit:cover;
 	padding:1rem;
+>>>>>>> food4
 }
 </style>
 </head>
@@ -126,9 +143,20 @@ nav ul li a{
 			</div>
 		</div>
 	</section>
+<<<<<<< HEAD
+	
+	<footer>
+		<p>&copy;2025 FoodieHub.All rights reserved.</p>
+		<p>Follow us on:
+		<a href="#" style="color:"pink;">Instagram</a>
+		<a href="#" style="color:"blue;">Facebook</a>
+		<a href="#" style="Black;">Twitter</a>
+		<a href="#" style="green;">Whatsapp</a>
+		</p>
+	</footer>
+=======
 
 	<script>
-<<<<<<< HEAD
 		document.addEventListener("DOMContentLoaded",function(){
 			const categoryCards = document.querySelectorAll(".categories.card");
 			const filterBtn = documents.createElement("button");
@@ -188,10 +216,9 @@ nav ul li a{
 		}
 
 		setInterval(updateTestimonial,5000);
-=======
+
 		const scrollBtn = document.createElement("button");
 		scrollBtn.textContent = "&uarr;";
-
 		scrollBtn.style.position = "fixed";
 		scrollBtn.style.bottom = "30px";
 		scrollBtn.style.right = "30px";
@@ -264,6 +291,6 @@ nav ul li a{
 		const observer = new IntersectionObserver(entries => {
 			entries.forEach(entry => };
 	</script>
->>>>>>> food5
+>>>>>>> food4
 </body>
 </html>
