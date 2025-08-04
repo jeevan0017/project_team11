@@ -1,0 +1,269 @@
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+      <title>FoodieHub|Home</title>
+<style>
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family:sans-serif,geneva;
+}
+body{
+	background color:white;
+	color:black;
+}
+header{
+	background:grey;
+	color:white;
+	padding:1rem 2rem;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+header h1{
+	font-size:1.8rem;
+}
+nav ul{
+	list-style:none;
+	display:flex;
+	gap:1.5rem;
+}
+nav ul li a{
+	color:white;
+	text-decoration:none;
+	font-weight:bold;
+}
+.hero{
+	background:url('C:\Users\jeevan\Downloads\food.jpg')no-repeat center center/cover;
+	height:85vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	text-align:center;
+	color:white;
+	padding:0 2rem;
+}
+.hero h2{
+	font-size:3rem;
+	margin-bottom:1rem;
+}
+.hero p{
+	font-size:1.2rem;
+	max-width:600px;
+}
+.categories{
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+	gap:2rem;
+	max-width:1200px;
+	margin:auto;
+}
+.section{
+	padding:4rem 2rem;
+	text-align:center;
+	font-size:2rem;
+	color:black;
+}
+.card{
+	border:1px solid black;
+	border-radius:10px;
+	overflow:hidden;
+	box-shadow:0 2px 5px rgba(0,0,0,0.1);
+	transition:transform 0.2s;
+	background:white;
+	object-fit:cover;
+	padding:1rem;
+}
+</style>
+</head>
+<body>
+	<header>
+	
+        <div style="display:flex;justify-content:space-between;align-items:center;background-color:grey;padding:10px;">
+		<div style="color:white;font-size:24px;font-weight:bold;">FoodieHub</div>
+
+		<div style="display:flex;align-items:center;gap:20px;">
+			<a href="#" style="color:white;text-decoration:none;">Home</a>
+			<a href="#" style="color:white;text-decoration:none;">Categories</a>
+			<a href="#" style="color:white;text-decoration:none;">Cart</a>
+			<a href="#" style="color:white;text-decoration:none;">Contact</a>
+
+		        <form style="display:flex;align-items:center;background:white;border-radius:4px;overflow:hidden;">
+				<input type="text" placeholder="search..." style="border:none;padding:5px;outline:none;">
+				<button type="submit" style="background:grey;border:none;padding:6px;">
+				</button>
+			</form>
+		</div>
+	</div>
+	</header>
+	<section class="hero">
+		<div>
+			<h2>Delicious Food,Delivered Fast</h2>
+			<p>Explore cuisines from top restaurants near you.order now and enjoy tasty meals at your doorstep.</p>
+			<button onclick="alert('Redirecting to menu...')">Order Now</button>
+		</div>
+	</section>
+	<section class="section">
+		<h2>Food Categories</h2>
+		<div class="categories">
+			<div class="card">
+				<img src="C:\Users\jeevan\Downloads\pizza.jpg" alt="pizza" width="300" height="200">
+				<h3>Pizza</h3>
+			</div>
+			<div class="card">
+				<img src="C:\Users\jeevan\Downloads\burger.jpg" alt="Burger" width="300" height="200">
+				<h3>Burger</h3>
+			</div>
+			<div class="card">
+				<img src="C:\Users\jeevan\Downloads\indianmeal.jpg" alt="Indian Meal" width="300" height="200">
+				<h3>Indian Meal</h3>
+			</div>
+			<div class="card">
+				<img src="C:\Users\jeevan\Downloads\Desserts.jpg" alt="Desserts" width="300" height="200">
+				<h3>Desserts</h3>
+			</div>
+		</div>
+	</section>
+
+	<script>
+<<<<<<< HEAD
+		document.addEventListener("DOMContentLoaded",function(){
+			const categoryCards = document.querySelectorAll(".categories.card");
+			const filterBtn = documents.createElement("button");
+			filterBtn.textContent = "Show Only Pizza";
+			filterBtn.style.marginTop = "2rem";
+			filterBtr.onclick = function(){
+				categoryCards.forEach(card =>{
+					const name = card.querySelector("h3").textContent;
+					if(name !=="Pizza")card.style.display = "none";
+					else card.style.display = "block";
+				});
+			};
+
+
+			document.querySelector(".catrgories").after(filterBtn);
+		});
+
+
+		const cartItems = [];
+		const popularCards = document.querySelectorAll(".popular.card");
+		popularCards.forEach((card,index) => {
+			const addBtn = document.createElement("button");
+			addBtn.textContent = "Add to Cart";
+			addBtn.style.marginBottom = "1rem";
+			card.appendChild(addBtn);
+			addBtn.onclick = function(){
+				const itemName = card.querySelector("h3").textContent;
+				cardItems.push(itemName);
+				alert('${itemName} added to cart!');
+			};
+		});
+
+
+		const cartLink = document.querySelector("a[href='#']):contains('Cart')");
+		if(cartLink){
+			cartLink.addEventListener("click",function(e){
+				e.preventDefault();
+				if (cartItems.length = = = 0) {
+					alert("You'r cart is empty.");
+				}
+				else{
+					alert("Cart Items:\n" + cartitems.join("\n"));
+				}
+			});
+		}
+
+
+		const testimonialText = ["Fantastic service and great variety! My go-to app for lunch.-Ravi.T.",
+			"Affordable and quick,never disappoints.Try the briyani!-Ayesha.k.",
+			"The delivery is always on time and food is warm and delicious.-Mohit.b."
+			];
+		let currentTestimonial = 0;
+		function updateTestimonial(){
+			const testimonialDiv = document.querySelector(".testimonial");
+			testimonialDiv.innerHTML = testimonialText[currentTestimonial];
+			currentTestimonial = (currentTestimonial + 1)% testimonialText.length;
+		}
+
+		setInterval(updateTestimonial,5000);
+=======
+		const scrollBtn = document.createElement("button");
+		scrollBtn.textContent = "&uarr;";
+
+		scrollBtn.style.position = "fixed";
+		scrollBtn.style.bottom = "30px";
+		scrollBtn.style.right = "30px";
+		scrollBtn.style.padding = "10px";
+		scrollBtn.style.fontSize = "20px";
+		scrollBtn.style.border = "none";
+		scrollBtn.style.borderRadius = "50%";
+		scrollBtn.style.background = "grey";
+		scrollBtn.style.color = "white";
+		scrollBtn.style.display = "none";
+		scrollBtn.style.cursor = "pointer";
+		scrollBtn.style.boxShadow = "0 0 8px rgba(0, 0, 0, 0.3)";
+		scrollBtn.style.zIndex = "1000";
+
+		document.body.appendChild(scrollBtn);
+
+		scrollBtn.onclick = () => {
+			window.scrollTo({ top: 0,behavior: "smooth" });
+		};
+
+		window.onscroll = function () {
+			if(window.scrollY >300) {
+				scrollBtn.style.display = "none";
+			}
+		};
+
+		const searchInput = document.getElementById("searchInput");
+		 
+		searchInput.addEventListener("input",function () {
+			const filter = searchInput.value.toLowercase();
+			const foodItems = document.querySelectorAll(".food-item");
+
+			foodItems.forEach(function (item)
+				{
+					const itemText = item.textContent.toLowerCase();
+					if(itemText.includes(filter)){
+						item.style.display = "block";
+					}
+					else{
+						item.style.display = "none";
+					}
+				});
+		});
+
+		const darkToggle = document.createElement("button");
+		darkToggle.textContent = "Dark Mode";
+		darkToggle.style.position = "fixed";
+		darkToggle.style.top = "30px";
+		darkToggle.style.right = "30px";
+		darkToggle.style.padding = "8px 12px";
+		darkToggle.style.background = "white";
+		darkToggle.style.color = "grey";
+		darkToggle.style.border = "none";
+		darkToggle.style,borderRadius = "5px";
+		darkToggle.style.cursor = "pointer";
+		document.body.appendChild(darkToggle);
+
+		let dark = false;
+
+		darkToggle.onclick = function () {
+			dark = !dark;
+
+			document.body.style.backgroundColor = dark ? "white" : "grey";
+			document.body.style.color = dark ? "white" : "grey";
+			darktoggle.textContent = dark ? "Light Mode" : "Dark Mode";
+		};
+
+
+		const cards = document.querySelectorAll(".card");
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => };
+	</script>
+>>>>>>> food5
+</body>
+</html>
