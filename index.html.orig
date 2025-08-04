@@ -4,17 +4,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
       <title>FoodieHub|Home</title>
 <style>
-.card:hover{
-	transform:translateY(-5px);
-}
-.card img{
-	width:100%;
-	height:150px;
-	object-fit:cover;
-}
-.testimonials{
-	background:white;
-	padding:1rem;
+<<<<<<< HEAD
 footer{
 	background:white;
 	color:black;
@@ -29,6 +19,7 @@ button{
 	margin-top:1rem;
 	cursor:pointer;
 	border-radius:5px;
+=======
 *{
 	margin:0;
 	padding:0;
@@ -100,6 +91,7 @@ nav ul li a{
 	background:white;
 	object-fit:cover;
 	padding:1rem;
+>>>>>>> food4
 }
 </style>
 </head>
@@ -151,14 +143,7 @@ nav ul li a{
 			</div>
 		</div>
 	</section>
-
-        <section class="testimonials">
-		<h2>What our customers say</h2>
-		<div class="testimonial">
-			    "I Love ordering from Foodiehub !Always fresh ,fast,and delicious.Highly recommended for anyone who loves good food."
-			    <br><br><strong>Priya.s</strong>
-		</div>
-	</section>
+<<<<<<< HEAD
 	
 	<footer>
 		<p>&copy;2025 FoodieHub.All rights reserved.</p>
@@ -169,7 +154,7 @@ nav ul li a{
 		<a href="#" style="green;">Whatsapp</a>
 		</p>
 	</footer>
-
+=======
 
 	<script>
 		document.addEventListener("DOMContentLoaded",function(){
@@ -306,5 +291,6 @@ nav ul li a{
 		const observer = new IntersectionObserver(entries => {
 			entries.forEach(entry => };
 	</script>
+>>>>>>> food4
 </body>
 </html>
