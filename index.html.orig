@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
       <title>FoodieHub|Home</title>
 <style>
+<<<<<<< HEAD
 .card:hover{
 	transform:translateY(-5px);
 }
@@ -15,6 +16,7 @@
 .testimonials{
 	background:white;
 	padding:1rem;
+=======
 footer{
 	background:white;
 	color:black;
@@ -33,18 +35,6 @@ button{
 	margin:0;
 	padding:0;
 	box-sizing:border-box;
-	font-family:'segoe UI',Tahoma,Geneva,verdana,sana-serif;
-}
-body{
-	background-color:whitw;
-	color:black;
-	line-height:1.6;
-}
-.section{
-	padding:4rem 2rem;
-	text-align:center;
-}
-.popular{
 	font-family:sans-serif,geneva;
 }
 body{
@@ -112,6 +102,8 @@ nav ul li a{
 	background:white;
 	object-fit:cover;
 	padding:1rem;
+
+>>>>>>> food3
 }
 </style>
 </head>
@@ -163,33 +155,8 @@ nav ul li a{
 			</div>
 		</div>
 	</section>
-	<section class="section">
-	<h2>Popular items</h2>
-	<div class="popular">
-	<div class="card">
-	<img src="C:\Users\jeevan\Downloads\briyani.jpg" alt="Briyani" width="300" height="200">
-	<h3>chicken Briyani</h3>
-	</div>
-	<div class="card">
-		    <img src="C:\Users\jeevan\Downloads\noodles.jpg" alt="Noodles"
-			      width="300" height="200">
-		    <h3>Hakka Noodles</h3>
-		    </div>
 
-		    <div class="card">
-		    <img src="C:\Users\jeevan\Downloads\samosa.jpg" alt="Samosa" width="300" height="200">
-		    <h3>Spicy samosa</h3>
-		    </div>
-
-		    <div class="card">
-				<img src="C:\Users\jeevan\Downloads\icecream.jpg" alt="Ice cream"
-					  width="300" height="200">
-				<h3>Vanilla ice cream</h3>
-				</div>
-				</div>
-				</section>
-
-
+<<<<<<< HEAD
         <section class="testimonials">
 		<h2>What our customers say</h2>
 		<div class="testimonial">
@@ -197,6 +164,7 @@ nav ul li a{
 			    <br><br><strong>Priya.s</strong>
 		</div>
 	</section>
+=======
 	
 	<footer>
 		<p>&copy;2025 FoodieHub.All rights reserved.</p>
@@ -344,5 +312,6 @@ nav ul li a{
 		const observer = new IntersectionObserver(entries => {
 			entries.forEach(entry => };
 	</script>
+>>>>>>> food3
 </body>
 </html>
