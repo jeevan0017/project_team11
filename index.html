@@ -128,6 +128,7 @@ nav ul li a{
 	</section>
 
 	<script>
+<<<<<<< HEAD
 		document.addEventListener("DOMContentLoaded",function(){
 			const categoryCards = document.querySelectorAll(".categories.card");
 			const filterBtn = documents.createElement("button");
@@ -187,5 +188,82 @@ nav ul li a{
 		}
 
 		setInterval(updateTestimonial,5000);
+=======
+		const scrollBtn = document.createElement("button");
+		scrollBtn.textContent = "&uarr;";
+
+		scrollBtn.style.position = "fixed";
+		scrollBtn.style.bottom = "30px";
+		scrollBtn.style.right = "30px";
+		scrollBtn.style.padding = "10px";
+		scrollBtn.style.fontSize = "20px";
+		scrollBtn.style.border = "none";
+		scrollBtn.style.borderRadius = "50%";
+		scrollBtn.style.background = "grey";
+		scrollBtn.style.color = "white";
+		scrollBtn.style.display = "none";
+		scrollBtn.style.cursor = "pointer";
+		scrollBtn.style.boxShadow = "0 0 8px rgba(0, 0, 0, 0.3)";
+		scrollBtn.style.zIndex = "1000";
+
+		document.body.appendChild(scrollBtn);
+
+		scrollBtn.onclick = () => {
+			window.scrollTo({ top: 0,behavior: "smooth" });
+		};
+
+		window.onscroll = function () {
+			if(window.scrollY >300) {
+				scrollBtn.style.display = "none";
+			}
+		};
+
+		const searchInput = document.getElementById("searchInput");
+		 
+		searchInput.addEventListener("input",function () {
+			const filter = searchInput.value.toLowercase();
+			const foodItems = document.querySelectorAll(".food-item");
+
+			foodItems.forEach(function (item)
+				{
+					const itemText = item.textContent.toLowerCase();
+					if(itemText.includes(filter)){
+						item.style.display = "block";
+					}
+					else{
+						item.style.display = "none";
+					}
+				});
+		});
+
+		const darkToggle = document.createElement("button");
+		darkToggle.textContent = "Dark Mode";
+		darkToggle.style.position = "fixed";
+		darkToggle.style.top = "30px";
+		darkToggle.style.right = "30px";
+		darkToggle.style.padding = "8px 12px";
+		darkToggle.style.background = "white";
+		darkToggle.style.color = "grey";
+		darkToggle.style.border = "none";
+		darkToggle.style,borderRadius = "5px";
+		darkToggle.style.cursor = "pointer";
+		document.body.appendChild(darkToggle);
+
+		let dark = false;
+
+		darkToggle.onclick = function () {
+			dark = !dark;
+
+			document.body.style.backgroundColor = dark ? "white" : "grey";
+			document.body.style.color = dark ? "white" : "grey";
+			darktoggle.textContent = dark ? "Light Mode" : "Dark Mode";
+		};
+
+
+		const cards = document.querySelectorAll(".card");
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => };
+	</script>
+>>>>>>> food5
 </body>
 </html>
